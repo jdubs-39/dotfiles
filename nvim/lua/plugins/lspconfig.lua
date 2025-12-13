@@ -5,7 +5,7 @@ return {
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",
-		opts = { ensure_installed = { "basedpyright", "ruff", "gopls", "stylua" } },
+		opts = { ensure_installed = { "basedpyright", "ruff", "gopls", "stylua", "lua_ls" } },
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },
 			"neovim/nvim-lspconfig",
@@ -21,7 +21,7 @@ return {
 			vim.lsp.enable("basedpyright", { capabilities = capabilities })
 			vim.lsp.enable("ruff", { capabilities = capabilities })
 			vim.lsp.enable("gopls", { capabilities = capabilities })
-			vim.lsp.enable("stylua", { capabilities = capabilities })
+			vim.lsp.enable("lua_ls", { capabilities = capabilities })
 		end,
 	},
 }
