@@ -5,7 +5,7 @@ return {
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",
-		opts = { ensure_installed = { "ruff", "gopls", "lua_ls", "zls" } },
+		opts = { ensure_installed = { "ruff", "lua_ls", "zls" } },
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },
 			"neovim/nvim-lspconfig",
@@ -19,7 +19,6 @@ return {
 		config = function()
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
 			vim.lsp.enable("ruff", { capabilities = capabilities })
-			vim.lsp.enable("gopls", { capabilities = capabilities })
 			vim.lsp.enable("lua_ls", { capabilities = capabilities })
 			vim.lsp.enable("zls", { capabilities = capabilities })
 		end,
