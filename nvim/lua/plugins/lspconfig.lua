@@ -5,7 +5,7 @@ return {
 	},
 	{
 		"mason-org/mason-lspconfig.nvim",
-		opts = { ensure_installed = { "basedpyright", "lua_ls", "zls" } },
+		opts = { ensure_installed = { "basedpyright", "lua_ls", "ocamllsp" } },
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },
 			"neovim/nvim-lspconfig",
@@ -20,7 +20,7 @@ return {
 			local capabilities = require("blink.cmp").get_lsp_capabilities()
 			vim.lsp.enable("basedpyright", { capabilities = capabilities })
 			vim.lsp.enable("lua_ls", { capabilities = capabilities })
-			vim.lsp.enable("zls", { capabilities = capabilities })
+			vim.lsp.enable("ocamllsp", { capabilities = capabilities })
 		end,
 	},
 }
