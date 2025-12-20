@@ -4,7 +4,7 @@ return {
 	config = function()
 		local tsconfig = require("nvim-treesitter.configs")
 		tsconfig.setup({
-			ensure_installed = { "lua", "python", "zig" },
+			ensure_installed = { "lua", "python", "ocaml", "ocaml_interface" },
 			highlight = { enable = true },
 			indent = { enable = true },
 		})
